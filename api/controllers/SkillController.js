@@ -8,7 +8,7 @@
 module.exports = {
 	get_skill:function (req,res){
         var typeSkill = req.param("typeSkill");
-        Skill.query('SELECT a.id,a.name,b.name as lv,a.level FROM `skill` a, `level` b WHERE a.level=b.id AND a.class=? ',[typeSkill],function (err,skill) 
+        Skill.query('SELECT a.id,a.name,b.name as lv,a.level,a.url FROM `skill` a, `level` b WHERE a.level=b.id AND a.class=? ',[typeSkill],function (err,skill) 
         {
             if(err){
             return res.json(err);
