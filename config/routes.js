@@ -45,7 +45,7 @@ module.exports.routes = {
   * for configuration options and examples.                                  *
   *                                                                          *
   ***************************************************************************/
-  'get /skill/:typeSkill':'SkillController.get_skill',
+  'get /skill/:typeSkill/:level':'SkillController.get_skill',
 
 
 };
